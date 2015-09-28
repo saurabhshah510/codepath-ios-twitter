@@ -1,6 +1,6 @@
-use_frameworks!
+platform :ios, '8.0'
 
 target 'MyTwitterology' do
-  pod 'BDBOAuth1Manager'
   pod 'AFNetworking'
+  pod 'BDBOAuth1Manager'
 end

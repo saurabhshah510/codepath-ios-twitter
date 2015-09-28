@@ -7,108 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09D27537C96F5099887861EB /* Pods_MyTwitterology.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42C6F593588B63F5A79879D /* Pods_MyTwitterology.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		0A47C9C91BB7441900495BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47C9C81BB7441900495BF0 /* AppDelegate.swift */; };
-		0A47C9CE1BB7441900495BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A47C9CC1BB7441900495BF0 /* Main.storyboard */; };
-		0A47C9D01BB7441900495BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A47C9CF1BB7441900495BF0 /* Assets.xcassets */; };
-		0A47C9D31BB7441900495BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A47C9D11BB7441900495BF0 /* LaunchScreen.storyboard */; };
-		0A47C9DC1BB7489900495BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47C9DB1BB7489900495BF0 /* LoginViewController.swift */; };
+		0AE36C841BB928D30070BAF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE36C831BB928D30070BAF0 /* AppDelegate.swift */; };
+		0AE36C861BB928D30070BAF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE36C851BB928D30070BAF0 /* ViewController.swift */; };
+		0AE36C891BB928D30070BAF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C871BB928D30070BAF0 /* Main.storyboard */; };
+		0AE36C8B1BB928D30070BAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C8A1BB928D30070BAF0 /* Assets.xcassets */; };
+		0AE36C8E1BB928D30070BAF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C8C1BB928D30070BAF0 /* LaunchScreen.storyboard */; };
+		4A976FDDB0353B26498D6A6C /* libPods-MyTwitterology.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 082C33E0B44F96F13EFF0CA4 /* libPods-MyTwitterology.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A47C9C51BB7441900495BF0 /* MyTwitterology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTwitterology.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A47C9C81BB7441900495BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A47C9CD1BB7441900495BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0A47C9CF1BB7441900495BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0A47C9D21BB7441900495BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0A47C9D41BB7441900495BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A47C9DB1BB7489900495BF0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		173CB7F370FDC2D72E5EA32C /* Pods-MyTwitterology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwitterology.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology.release.xcconfig"; sourceTree = "<group>"; };
-		80CB8EFA6ADAA5BDABE34094 /* Pods-MyTwitterology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwitterology.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology.debug.xcconfig"; sourceTree = "<group>"; };
-		B42C6F593588B63F5A79879D /* Pods_MyTwitterology.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTwitterology.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		082C33E0B44F96F13EFF0CA4 /* libPods-MyTwitterology.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTwitterology.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AE36C801BB928D30070BAF0 /* MyTwitterology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTwitterology.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AE36C831BB928D30070BAF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0AE36C851BB928D30070BAF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AE36C881BB928D30070BAF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AE36C8A1BB928D30070BAF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AE36C8D1BB928D30070BAF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AE36C8F1BB928D30070BAF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE36C951BB929290070BAF0 /* MyTwitterology-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTwitterology-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD64291425B83FD3028865B7 /* Pods-MyTwitterology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwitterology.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology.debug.xcconfig"; sourceTree = "<group>"; };
+		FF0DFED901697264CF1C570F /* Pods-MyTwitterology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwitterology.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0A47C9C21BB7441900495BF0 /* Frameworks */ = {
+		0AE36C7D1BB928D30070BAF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D27537C96F5099887861EB /* Pods_MyTwitterology.framework in Frameworks */,
+				4A976FDDB0353B26498D6A6C /* libPods-MyTwitterology.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A47C9BC1BB7441900495BF0 = {
+		0AE36C771BB928D30070BAF0 = {
 			isa = PBXGroup;
 			children = (
-				0A47C9C71BB7441900495BF0 /* MyTwitterology */,
-				0A47C9C61BB7441900495BF0 /* Products */,
-				9C5F39DB3FC91EFEE96A717A /* Pods */,
-				8FE6100F068DB2E7BD0606A8 /* Frameworks */,
+				0AE36C821BB928D30070BAF0 /* MyTwitterology */,
+				0AE36C811BB928D30070BAF0 /* Products */,
+				6A95695DC9FCC12A6D3C80AA /* Pods */,
+				A93647E6CE50F7151EC0C8A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		0A47C9C61BB7441900495BF0 /* Products */ = {
+		0AE36C811BB928D30070BAF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A47C9C51BB7441900495BF0 /* MyTwitterology.app */,
+				0AE36C801BB928D30070BAF0 /* MyTwitterology.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0A47C9C71BB7441900495BF0 /* MyTwitterology */ = {
+		0AE36C821BB928D30070BAF0 /* MyTwitterology */ = {
 			isa = PBXGroup;
 			children = (
-				0A47C9DA1BB7478300495BF0 /* ViewControllers */,
-				0A47C9C81BB7441900495BF0 /* AppDelegate.swift */,
-				0A47C9CC1BB7441900495BF0 /* Main.storyboard */,
-				0A47C9CF1BB7441900495BF0 /* Assets.xcassets */,
-				0A47C9D11BB7441900495BF0 /* LaunchScreen.storyboard */,
-				0A47C9D41BB7441900495BF0 /* Info.plist */,
+				0AE36C831BB928D30070BAF0 /* AppDelegate.swift */,
+				0AE36C851BB928D30070BAF0 /* ViewController.swift */,
+				0AE36C871BB928D30070BAF0 /* Main.storyboard */,
+				0AE36C8A1BB928D30070BAF0 /* Assets.xcassets */,
+				0AE36C8C1BB928D30070BAF0 /* LaunchScreen.storyboard */,
+				0AE36C8F1BB928D30070BAF0 /* Info.plist */,
+				0AE36C951BB929290070BAF0 /* MyTwitterology-Bridging-Header.h */,
 			);
 			path = MyTwitterology;
 			sourceTree = "<group>";
 		};
-		0A47C9DA1BB7478300495BF0 /* ViewControllers */ = {
+		6A95695DC9FCC12A6D3C80AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0A47C9DB1BB7489900495BF0 /* LoginViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		8FE6100F068DB2E7BD0606A8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B42C6F593588B63F5A79879D /* Pods_MyTwitterology.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9C5F39DB3FC91EFEE96A717A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				80CB8EFA6ADAA5BDABE34094 /* Pods-MyTwitterology.debug.xcconfig */,
-				173CB7F370FDC2D72E5EA32C /* Pods-MyTwitterology.release.xcconfig */,
+				DD64291425B83FD3028865B7 /* Pods-MyTwitterology.debug.xcconfig */,
+				FF0DFED901697264CF1C570F /* Pods-MyTwitterology.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A93647E6CE50F7151EC0C8A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				082C33E0B44F96F13EFF0CA4 /* libPods-MyTwitterology.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0A47C9C41BB7441900495BF0 /* MyTwitterology */ = {
+		0AE36C7F1BB928D30070BAF0 /* MyTwitterology */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A47C9D71BB7441900495BF0 /* Build configuration list for PBXNativeTarget "MyTwitterology" */;
+			buildConfigurationList = 0AE36C921BB928D30070BAF0 /* Build configuration list for PBXNativeTarget "MyTwitterology" */;
 			buildPhases = (
-				12E32E2AB01958B9E33E829A /* Check Pods Manifest.lock */,
-				0A47C9C11BB7441900495BF0 /* Sources */,
-				0A47C9C21BB7441900495BF0 /* Frameworks */,
-				0A47C9C31BB7441900495BF0 /* Resources */,
-				F5913A6AB9945E85431E715F /* Embed Pods Frameworks */,
-				2A24BA4747DEBC3513F7081F /* Copy Pods Resources */,
+				A43E6B23E09D53E73CB5767A /* Check Pods Manifest.lock */,
+				0AE36C7C1BB928D30070BAF0 /* Sources */,
+				0AE36C7D1BB928D30070BAF0 /* Frameworks */,
+				0AE36C7E1BB928D30070BAF0 /* Resources */,
+				96C62595AF8D71692500CB09 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -116,26 +109,26 @@
 			);
 			name = MyTwitterology;
 			productName = MyTwitterology;
-			productReference = 0A47C9C51BB7441900495BF0 /* MyTwitterology.app */;
+			productReference = 0AE36C801BB928D30070BAF0 /* MyTwitterology.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0A47C9BD1BB7441900495BF0 /* Project object */ = {
+		0AE36C781BB928D30070BAF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Saurabh Shah";
 				TargetAttributes = {
-					0A47C9C41BB7441900495BF0 = {
+					0AE36C7F1BB928D30070BAF0 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = Y2772GT9PP;
 					};
 				};
 			};
-			buildConfigurationList = 0A47C9C01BB7441900495BF0 /* Build configuration list for PBXProject "MyTwitterology" */;
+			buildConfigurationList = 0AE36C7B1BB928D30070BAF0 /* Build configuration list for PBXProject "MyTwitterology" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -143,46 +136,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 0A47C9BC1BB7441900495BF0;
-			productRefGroup = 0A47C9C61BB7441900495BF0 /* Products */;
+			mainGroup = 0AE36C771BB928D30070BAF0;
+			productRefGroup = 0AE36C811BB928D30070BAF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A47C9C41BB7441900495BF0 /* MyTwitterology */,
+				0AE36C7F1BB928D30070BAF0 /* MyTwitterology */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0A47C9C31BB7441900495BF0 /* Resources */ = {
+		0AE36C7E1BB928D30070BAF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A47C9D31BB7441900495BF0 /* LaunchScreen.storyboard in Resources */,
-				0A47C9D01BB7441900495BF0 /* Assets.xcassets in Resources */,
-				0A47C9CE1BB7441900495BF0 /* Main.storyboard in Resources */,
+				0AE36C8E1BB928D30070BAF0 /* LaunchScreen.storyboard in Resources */,
+				0AE36C8B1BB928D30070BAF0 /* Assets.xcassets in Resources */,
+				0AE36C891BB928D30070BAF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12E32E2AB01958B9E33E829A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2A24BA4747DEBC3513F7081F /* Copy Pods Resources */ = {
+		96C62595AF8D71692500CB09 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,48 +175,48 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5913A6AB9945E85431E715F /* Embed Pods Frameworks */ = {
+		A43E6B23E09D53E73CB5767A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A47C9C11BB7441900495BF0 /* Sources */ = {
+		0AE36C7C1BB928D30070BAF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A47C9DC1BB7489900495BF0 /* LoginViewController.swift in Sources */,
-				0A47C9C91BB7441900495BF0 /* AppDelegate.swift in Sources */,
+				0AE36C861BB928D30070BAF0 /* ViewController.swift in Sources */,
+				0AE36C841BB928D30070BAF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0A47C9CC1BB7441900495BF0 /* Main.storyboard */ = {
+		0AE36C871BB928D30070BAF0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0A47C9CD1BB7441900495BF0 /* Base */,
+				0AE36C881BB928D30070BAF0 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0A47C9D11BB7441900495BF0 /* LaunchScreen.storyboard */ = {
+		0AE36C8C1BB928D30070BAF0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0A47C9D21BB7441900495BF0 /* Base */,
+				0AE36C8D1BB928D30070BAF0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -246,7 +224,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0A47C9D51BB7441900495BF0 /* Debug */ = {
+		0AE36C901BB928D30070BAF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -290,7 +268,7 @@
 			};
 			name = Debug;
 		};
-		0A47C9D61BB7441900495BF0 /* Release */ = {
+		0AE36C911BB928D30070BAF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -327,52 +305,57 @@
 			};
 			name = Release;
 		};
-		0A47C9D81BB7441900495BF0 /* Debug */ = {
+		0AE36C931BB928D30070BAF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80CB8EFA6ADAA5BDABE34094 /* Pods-MyTwitterology.debug.xcconfig */;
+			baseConfigurationReference = DD64291425B83FD3028865B7 /* Pods-MyTwitterology.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTwitterology/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepathclass.MyTwitterology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTwitterology/MyTwitterology-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		0A47C9D91BB7441900495BF0 /* Release */ = {
+		0AE36C941BB928D30070BAF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 173CB7F370FDC2D72E5EA32C /* Pods-MyTwitterology.release.xcconfig */;
+			baseConfigurationReference = FF0DFED901697264CF1C570F /* Pods-MyTwitterology.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTwitterology/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepathclass.MyTwitterology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTwitterology/MyTwitterology-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A47C9C01BB7441900495BF0 /* Build configuration list for PBXProject "MyTwitterology" */ = {
+		0AE36C7B1BB928D30070BAF0 /* Build configuration list for PBXProject "MyTwitterology" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A47C9D51BB7441900495BF0 /* Debug */,
-				0A47C9D61BB7441900495BF0 /* Release */,
+				0AE36C901BB928D30070BAF0 /* Debug */,
+				0AE36C911BB928D30070BAF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A47C9D71BB7441900495BF0 /* Build configuration list for PBXNativeTarget "MyTwitterology" */ = {
+		0AE36C921BB928D30070BAF0 /* Build configuration list for PBXNativeTarget "MyTwitterology" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A47C9D81BB7441900495BF0 /* Debug */,
-				0A47C9D91BB7441900495BF0 /* Release */,
+				0AE36C931BB928D30070BAF0 /* Debug */,
+				0AE36C941BB928D30070BAF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0A47C9BD1BB7441900495BF0 /* Project object */;
+	rootObject = 0AE36C781BB928D30070BAF0 /* Project object */;
 }
