@@ -12,6 +12,7 @@
 		0AE36C891BB928D30070BAF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C871BB928D30070BAF0 /* Main.storyboard */; };
 		0AE36C8B1BB928D30070BAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C8A1BB928D30070BAF0 /* Assets.xcassets */; };
 		0AE36C8E1BB928D30070BAF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C8C1BB928D30070BAF0 /* LaunchScreen.storyboard */; };
+		0AE36C9A1BB9BD3B0070BAF0 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE36C991BB9BD3B0070BAF0 /* TwitterClient.swift */; };
 		4A976FDDB0353B26498D6A6C /* libPods-MyTwitterology.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 082C33E0B44F96F13EFF0CA4 /* libPods-MyTwitterology.a */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		0AE36C8D1BB928D30070BAF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AE36C8F1BB928D30070BAF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AE36C951BB929290070BAF0 /* MyTwitterology-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTwitterology-Bridging-Header.h"; sourceTree = "<group>"; };
+		0AE36C991BB9BD3B0070BAF0 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		DD64291425B83FD3028865B7 /* Pods-MyTwitterology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwitterology.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology.debug.xcconfig"; sourceTree = "<group>"; };
 		FF0DFED901697264CF1C570F /* Pods-MyTwitterology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTwitterology.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTwitterology/Pods-MyTwitterology.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 		0AE36C821BB928D30070BAF0 /* MyTwitterology */ = {
 			isa = PBXGroup;
 			children = (
+				0AE36C981BB9BD1C0070BAF0 /* API */,
 				0AE36C831BB928D30070BAF0 /* AppDelegate.swift */,
 				0AE36C851BB928D30070BAF0 /* ViewController.swift */,
 				0AE36C871BB928D30070BAF0 /* Main.storyboard */,
@@ -71,6 +74,14 @@
 				0AE36C951BB929290070BAF0 /* MyTwitterology-Bridging-Header.h */,
 			);
 			path = MyTwitterology;
+			sourceTree = "<group>";
+		};
+		0AE36C981BB9BD1C0070BAF0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0AE36C991BB9BD3B0070BAF0 /* TwitterClient.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		6A95695DC9FCC12A6D3C80AA /* Pods */ = {
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE36C861BB928D30070BAF0 /* ViewController.swift in Sources */,
+				0AE36C9A1BB9BD3B0070BAF0 /* TwitterClient.swift in Sources */,
 				0AE36C841BB928D30070BAF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
