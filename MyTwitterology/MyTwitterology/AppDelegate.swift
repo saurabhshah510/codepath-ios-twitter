@@ -45,11 +45,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TwitterClient.sharedInstance.fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuth1Credential(queryString: url.query), success: { (accessToken: BDBOAuth1Credential!) -> Void in
             TwitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
             TwitterClient.sharedInstance.GET("1.1/account/verify_credentials.json", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
-                    print("Getting user credentials")
+                    print("\(response)")
                 }, failure: { (operation:AFHTTPRequestOperation!, error: NSError!) -> Void in
                     print("Error getting user credentials")
             })
             
+            TwitterClient.sharedInstance.GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+                    print("\(response)")
+                }, failure: { (operation:AFHTTPRequestOperation!, error: NSError!) -> Void in
+                    print("Error getting home timeline")
+            })            
             
             }) { (error: NSError!) -> Void in
                 print("Error getting the access token")
