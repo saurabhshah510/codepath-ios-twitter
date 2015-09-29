@@ -20,7 +20,7 @@ class TweetsCell: UITableViewCell {
         didSet{
             self.profileImageView.setImageWithURL(tweet.user?.profileImageUrl)
             self.nameLabel.text = tweet.user!.name
-            self.createdAtLabel.text = tweet.createdAtString
+            self.createdAtLabel.text = tweet.createdAtDiff
             self.tweetLabel.text = tweet.text
         }
     }
