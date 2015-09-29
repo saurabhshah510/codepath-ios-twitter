@@ -10,6 +10,8 @@ import UIKit
 
 class ComposeTweetViewController: UIViewController {
 
+    @IBOutlet weak var tweetTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,16 @@ class ComposeTweetViewController: UIViewController {
     @IBAction func onCancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func onClickTweet(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        let tweetText = self.tweetTextField.text as String?
+        if(tweetText != nil &&  tweetText != ""){
+            TwitterClient.sharedInstance.postTweet(tweetText!)
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
