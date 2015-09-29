@@ -34,8 +34,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
     }
     
     func postTweet(tweetText: String){
-        let requestObject = ["status": tweetText]
-        POST("1.1/statuses/update.json", parameters: requestObject, success: { (operaion: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+        POST("1.1/statuses/update.json", parameters: ["status": tweetText], success: { (operaion: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                 print("Successul tweeting")
             }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                 print(error)
@@ -43,7 +42,11 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
     }
     
     func retweet(tweet: Tweet){
-        
+        POST("1.1/statuses/retweet/\(tweet.id!).json", parameters: nil, success: { (opertion:AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            print("successfully retweeted")
+            }) { (operation:AFHTTPRequestOperation!, error:NSError!) -> Void in
+                print("error retweeting")
+        }
     }
     
     func reply(tweet: Tweet){
@@ -51,7 +54,11 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
     }
     
     func favorite(tweet: Tweet){
-        
+        POST("1.1/favorites/create.json?id=\(tweet.id!)", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            print("successfully favorited")
+            }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                print("error favoriting")
+        }
     }
     
     
