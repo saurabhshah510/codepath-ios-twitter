@@ -13,15 +13,24 @@ class TweetDetailsViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
-    @IBOutlet weak var replyText: UITextField!
+    @IBOutlet weak var replyText: UITextView!
+
     @IBOutlet weak var nameLabel: UILabel!
     var tweet: Tweet!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let borderColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
+        
+        
+        replyText.layer.borderColor = borderColor.CGColor
+        replyText.layer.borderWidth = 1.0
+        replyText.layer.cornerRadius = 5.0
+        
         self.profileImageView.setImageWithURL(tweet.user?.profileImageUrl)
         self.nameLabel.text = tweet.user!.name
-        self.createdAtLabel.text = tweet.createdAtString
+        self.createdAtLabel.text = tweet.createdAtDiff
         self.tweetLabel.text = tweet.text
         self.replyText.text = "@\(tweet.user!.screen_name!)"
         // Do any additional setup after loading the view.
