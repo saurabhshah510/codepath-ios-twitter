@@ -13,7 +13,7 @@ class TweetDetailsViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
-    
+    @IBOutlet weak var replyText: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     var tweet: Tweet!
     
@@ -23,6 +23,7 @@ class TweetDetailsViewController: UIViewController {
         self.nameLabel.text = tweet.user!.name
         self.createdAtLabel.text = tweet.createdAtString
         self.tweetLabel.text = tweet.text
+        self.replyText.text = "@\(tweet.user!.screen_name!)"
         // Do any additional setup after loading the view.
     }
 
@@ -36,7 +37,8 @@ class TweetDetailsViewController: UIViewController {
     }
 
     @IBAction func onReply(sender: AnyObject) {
-        TwitterClient.sharedInstance.reply(tweet)
+        TwitterClient.sharedInstance.reply(replyText.text!, tweet: tweet)
+        self.replyText.userInteractionEnabled = false
     }
     
     @IBAction func onFavorite(sender: AnyObject) {

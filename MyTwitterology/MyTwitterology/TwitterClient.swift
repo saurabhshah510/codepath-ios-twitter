@@ -49,8 +49,12 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
         }
     }
     
-    func reply(tweet: Tweet){
-        
+    func reply(reply: String, tweet: Tweet){
+        POST("1.1/statuses/update.json", parameters: ["status": reply, "in_reply_to_status_id": tweet.id!], success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            print("successfully replied")
+            }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                print("error replying")
+        }
     }
     
     func favorite(tweet: Tweet){

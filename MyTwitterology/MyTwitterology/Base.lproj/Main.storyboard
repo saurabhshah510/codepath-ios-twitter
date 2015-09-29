@@ -216,26 +216,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNL-Do-lN6">
-                                <rect key="frame" x="20" y="385" width="59" height="30"/>
+                                <rect key="frame" x="20" y="335" width="59" height="30"/>
                                 <state key="normal" title="Retweet"/>
                                 <connections>
                                     <action selector="onRetweet:" destination="SbJ-FW-zcM" eventType="touchUpInside" id="spu-vD-JDt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fh-v0-HPq">
-                                <rect key="frame" x="248" y="385" width="52" height="30"/>
-                                <state key="normal" title="Reply"/>
-                                <connections>
-                                    <action selector="onReply:" destination="SbJ-FW-zcM" eventType="touchUpInside" id="kMM-9L-2G8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-ux-YnQ">
-                                <rect key="frame" x="128" y="385" width="86" height="30"/>
+                                <rect key="frame" x="231" y="335" width="86" height="30"/>
                                 <state key="normal" title="Favourite"/>
                                 <connections>
                                     <action selector="onFavorite:" destination="SbJ-FW-zcM" eventType="touchUpInside" id="nwk-lw-3GE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fh-v0-HPq">
+                                <rect key="frame" x="134" y="504" width="52" height="30"/>
+                                <state key="normal" title="Reply"/>
+                                <connections>
+                                    <action selector="onReply:" destination="SbJ-FW-zcM" eventType="touchUpInside" id="kMM-9L-2G8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IJl-MR-KC8">
+                                <rect key="frame" x="20" y="417" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -244,6 +249,7 @@
                         <outlet property="createdAtLabel" destination="yh7-MK-cih" id="e3B-xr-OGo"/>
                         <outlet property="nameLabel" destination="zTv-w1-KWa" id="h2R-rj-mEr"/>
                         <outlet property="profileImageView" destination="jXi-gI-Bf8" id="QXk-IN-MbM"/>
+                        <outlet property="replyText" destination="IJl-MR-KC8" id="2rT-cw-RZN"/>
                         <outlet property="tweetLabel" destination="fnp-iW-Tb8" id="69m-je-WCW"/>
                     </connections>
                 </viewController>
