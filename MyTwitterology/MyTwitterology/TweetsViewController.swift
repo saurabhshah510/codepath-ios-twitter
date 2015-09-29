@@ -9,16 +9,25 @@
 import UIKit
 
 class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var refreshControl: UIRefreshControl!
     var tweets: [Tweet]?
     @IBOutlet weak var tweetsTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "fetchTweets", forControlEvents: UIControlEvents.ValueChanged)
+        tweetsTableView.insertSubview(refreshControl, atIndex: 0)
+        fetchTweets()
+        // Do any additional setup after loading the view.
+    }
+    
+    func fetchTweets(){
         TwitterClient.sharedInstance.homeTimelineWithParams(nil) { (tweets, error) -> () in
             self.tweets = tweets;
             self.tweetsTableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func onLogout(sender: AnyObject) {
