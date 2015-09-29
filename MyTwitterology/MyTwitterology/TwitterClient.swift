@@ -42,6 +42,19 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
         }
     }
     
+    func retweet(tweet: Tweet){
+        
+    }
+    
+    func reply(tweet: Tweet){
+        
+    }
+    
+    func favorite(tweet: Tweet){
+        
+    }
+    
+    
     func login(completion: (user: User?, error: NSError?) -> ()){
         loginCompletion = completion
         

@@ -32,12 +32,15 @@ class TweetDetailsViewController: UIViewController {
     }
     
     @IBAction func onRetweet(sender: AnyObject) {
+        TwitterClient.sharedInstance.retweet(tweet)
     }
 
     @IBAction func onReply(sender: AnyObject) {
+        TwitterClient.sharedInstance.reply(tweet)
     }
     
     @IBAction func onFavorite(sender: AnyObject) {
+        TwitterClient.sharedInstance.favorite(tweet)
     }
     /*
     // MARK: - Navigation

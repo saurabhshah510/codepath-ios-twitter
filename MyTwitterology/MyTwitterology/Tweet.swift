@@ -11,12 +11,14 @@ import UIKit
 class Tweet: NSObject {
     var user: User?
     var text: String?
+    var id: String?
     var createdAtString: String?
     var createdAt: NSDate?
     
     init(dictionary: NSDictionary){
         user = User.init(dictionary: dictionary["user"] as! NSDictionary)
         text = dictionary["text"] as? String
+        id = dictionary["id_str"] as? String
         createdAtString = dictionary["created_at"] as? String
         let formatter = NSDateFormatter()
         formatter.dateFormat = "EEE MMM D HH:mm:ss Z y"
