@@ -46,15 +46,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pZx-4w-oMN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="157" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pZx-4w-oMN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TweetsCell" rowHeight="90" id="d0t-WF-Lsi" customClass="TweetsCell" customModule="MyTwitterology" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TweetsCell" rowHeight="157" id="d0t-WF-Lsi" customClass="TweetsCell" customModule="MyTwitterology" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0t-WF-Lsi" id="qI1-vr-erm">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipy-nQ-oHb">
@@ -70,7 +70,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweet" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSx-sE-RgA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tweet" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSx-sE-RgA">
                                                     <rect key="frame" x="82" y="21" width="199" height="62"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -82,19 +82,47 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="retweet" translatesAutoresizingMaskIntoConstraints="NO" id="exL-5t-drX">
+                                                    <rect key="frame" x="128" y="83" width="30" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="8aC-Ob-q2O"/>
+                                                        <constraint firstAttribute="width" constant="16" id="zgs-Se-S4d"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" misplaced="YES" image="reply" translatesAutoresizingMaskIntoConstraints="NO" id="1xn-dv-KZ4">
+                                                    <rect key="frame" x="82" y="83" width="30" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="9m9-hD-2uE"/>
+                                                        <constraint firstAttribute="width" constant="16" id="bPz-HM-Tgc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="favorite" translatesAutoresizingMaskIntoConstraints="NO" id="QG6-XP-Anl">
+                                                    <rect key="frame" x="172" y="83" width="30" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="Pmc-3N-Rk4"/>
+                                                        <constraint firstAttribute="height" constant="16" id="mDj-22-3pO"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="1xn-dv-KZ4" firstAttribute="top" secondItem="ZSx-sE-RgA" secondAttribute="bottom" constant="10" id="7EN-fc-te6"/>
+                                                <constraint firstItem="exL-5t-drX" firstAttribute="baseline" secondItem="1xn-dv-KZ4" secondAttribute="baseline" id="9Fa-Af-3Fh"/>
                                                 <constraint firstItem="MRa-tk-MQS" firstAttribute="top" secondItem="qI1-vr-erm" secondAttribute="top" constant="3" id="E5p-AM-Nb4"/>
                                                 <constraint firstAttribute="trailing" secondItem="fjj-aG-CTV" secondAttribute="trailing" constant="6" id="KUy-qh-Hn5"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1xn-dv-KZ4" secondAttribute="bottom" constant="8" id="OpL-fg-fHC"/>
                                                 <constraint firstItem="MRa-tk-MQS" firstAttribute="leading" secondItem="ipy-nQ-oHb" secondAttribute="trailing" constant="6" id="UnC-JJ-jpu"/>
                                                 <constraint firstItem="ZSx-sE-RgA" firstAttribute="top" secondItem="MRa-tk-MQS" secondAttribute="bottom" constant="2" id="Uxz-nC-Xfx"/>
+                                                <constraint firstItem="1xn-dv-KZ4" firstAttribute="leading" secondItem="qI1-vr-erm" secondAttribute="leading" constant="80" id="X6z-cc-6te"/>
+                                                <constraint firstItem="QG6-XP-Anl" firstAttribute="leading" secondItem="exL-5t-drX" secondAttribute="trailing" constant="10" id="YzR-Yi-0E2"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ipy-nQ-oHb" secondAttribute="bottom" constant="6" id="aaQ-t3-RUy"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZSx-sE-RgA" secondAttribute="bottom" constant="6" id="kbK-NS-zhl"/>
+                                                <constraint firstItem="exL-5t-drX" firstAttribute="leading" secondItem="1xn-dv-KZ4" secondAttribute="trailing" constant="10" id="crP-0E-lzJ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZSx-sE-RgA" secondAttribute="bottom" constant="6" id="kbK-NS-zhl"/>
                                                 <constraint firstItem="fjj-aG-CTV" firstAttribute="centerY" secondItem="MRa-tk-MQS" secondAttribute="centerY" id="pWj-rK-rea"/>
                                                 <constraint firstItem="ipy-nQ-oHb" firstAttribute="top" secondItem="qI1-vr-erm" secondAttribute="top" constant="6" id="rQf-z8-GFF"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZSx-sE-RgA" secondAttribute="trailing" constant="6" id="rtv-xr-s5u"/>
                                                 <constraint firstItem="ZSx-sE-RgA" firstAttribute="leading" secondItem="MRa-tk-MQS" secondAttribute="leading" id="t9z-DW-mZR"/>
                                                 <constraint firstItem="ipy-nQ-oHb" firstAttribute="leading" secondItem="qI1-vr-erm" secondAttribute="leading" constant="6" id="tBc-FO-6CL"/>
+                                                <constraint firstItem="QG6-XP-Anl" firstAttribute="baseline" secondItem="1xn-dv-KZ4" secondAttribute="baseline" id="wAc-na-XXt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -322,4 +350,9 @@
             <point key="canvasLocation" x="1271" y="312"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favorite" width="16" height="16"/>
+        <image name="reply" width="16" height="16"/>
+        <image name="retweet" width="19" height="16"/>
+    </resources>
 </document>
