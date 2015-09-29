@@ -9,6 +9,8 @@
 import UIKit
 var _currentUser: User?
 let currentUserKey = "twCurrentUserKey"
+let userDidLoginNotification = "userDidLoginNotification"
+let userDidLogoutNotification = "userDidLogoutNotification"
 
 class User: NSObject {
     var name: String?
@@ -23,6 +25,12 @@ class User: NSObject {
         screen_name = dictionary["screen_name"] as? String
         profileImageUrl = dictionary["profile_image_url"] as? String
         tagline = dictionary["description"] as? String
+    }
+    
+    func logout(){
+        User.currentUser = nil
+        TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
+        NSNotificationCenter.defaultCenter().postNotificationName(userDidLogoutNotification, object: nil)
     }
     
     class var currentUser: User?{
