@@ -42,29 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        TwitterClient.sharedInstance.fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuth1Credential(queryString: url.query), success: { (accessToken: BDBOAuth1Credential!) -> Void in
-            print("Got access token")
-            TwitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
-            TwitterClient.sharedInstance.GET("1.1/account/verify_credentials.json", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
-                let user = User(dictionary: response as! NSDictionary)
-                print("\(user.name)")
-                }, failure: { (operation:AFHTTPRequestOperation!, error: NSError!) -> Void in
-                    print("Error getting user credentials")
-            })
-            
-            TwitterClient.sharedInstance.GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
-                let tweets = Tweet.tweetsWithArray(response as! [NSDictionary])
-                for tweet in tweets{
-                    print("text: \(tweet.text) ----- createdat: \(tweet.createdAt)")
-                }
-
-                }, failure: { (operation:AFHTTPRequestOperation!, error: NSError!) -> Void in
-                    print("Error getting home timeline")
-            })
-            
-            }) { (error: NSError!) -> Void in
-                print("Error getting the access token")
-        }
+        TwitterClient.sharedInstance.openURL(url)        
         return true
     }
 
