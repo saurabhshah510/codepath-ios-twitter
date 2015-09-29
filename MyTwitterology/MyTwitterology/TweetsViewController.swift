@@ -9,10 +9,13 @@
 import UIKit
 
 class TweetsViewController: UIViewController {
+    var tweets: [Tweet]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        TwitterClient.sharedInstance.homeTimelineWithParams(nil) { (tweets, error) -> () in
+            self.tweets = tweets;
+        }
         // Do any additional setup after loading the view.
     }
     
