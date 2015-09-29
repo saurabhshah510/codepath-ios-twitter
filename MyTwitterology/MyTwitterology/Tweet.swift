@@ -22,7 +22,7 @@ class Tweet: NSObject {
         id = dictionary["id_str"] as? String
         createdAtString = dictionary["created_at"] as? String
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "EEE MMM D HH:mm:ss Z y"
+        formatter.dateFormat = "EEE MMM dd HH:mm:ss Z y"
         createdAt = formatter.dateFromString(createdAtString!)
         let seconds = NSInteger(createdAt!.timeIntervalSinceNow) * -1
         let days = seconds/86400
