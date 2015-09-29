@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="-251" y="312"/>
         </scene>
-        <!--View Controller-->
+        <!--Tweets View Controller-->
         <scene sceneID="D0m-rD-Jnk">
             <objects>
-                <viewController id="FMk-sG-Uq5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetsViewController" id="FMk-sG-Uq5" customClass="TweetsViewController" customModule="MyTwitterology" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fxV-aD-rOO"/>
                         <viewControllerLayoutGuide type="bottom" id="kJB-Ml-qKo"/>

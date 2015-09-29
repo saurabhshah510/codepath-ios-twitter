@@ -45,6 +45,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
             TwitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
             TwitterClient.sharedInstance.GET("1.1/account/verify_credentials.json", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                 let user = User(dictionary: response as! NSDictionary)
+                User.currentUser = user
                 print("\(user.name)")
                 self.loginCompletion?(user: user, error: nil)
                 }, failure: { (operation:AFHTTPRequestOperation!, error: NSError!) -> Void in
@@ -55,7 +56,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
             TwitterClient.sharedInstance.GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                 let tweets = Tweet.tweetsWithArray(response as! [NSDictionary])
                 for tweet in tweets{
-                    print("text: \(tweet.text) ----- createdat: \(tweet.createdAt)")
+//                    print("text: \(tweet.text) ----- createdat: \(tweet.createdAt)")
                 }
                 
                 }, failure: { (operation:AFHTTPRequestOperation!, error: NSError!) -> Void in
