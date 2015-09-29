@@ -43,6 +43,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         if self.tweets != nil{
             var cell = tweetsTableView.dequeueReusableCellWithIdentifier("TweetsCell", forIndexPath: indexPath) as! TweetsCell
@@ -51,6 +55,14 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }else{
             return UITableViewCell()
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let cell = sender as! TweetsCell
+        let indexPath = tweetsTableView.indexPathForCell(cell)
+        let tweet = self.tweets![indexPath!.row]
+        let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
+        tweetDetailsViewController.tweet = tweet
     }
     
     

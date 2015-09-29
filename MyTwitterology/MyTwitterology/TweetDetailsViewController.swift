@@ -9,10 +9,20 @@
 import UIKit
 
 class TweetDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var tweetLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    var tweet: Tweet!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.profileImageView.setImageWithURL(tweet.user?.profileImageUrl)
+        self.nameLabel.text = tweet.user!.name
+        self.createdAtLabel.text = tweet.createdAtString
+        self.tweetLabel.text = tweet.text
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +31,14 @@ class TweetDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onRetweet(sender: AnyObject) {
+    }
 
+    @IBAction func onReply(sender: AnyObject) {
+    }
+    
+    @IBAction func onFavorite(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 

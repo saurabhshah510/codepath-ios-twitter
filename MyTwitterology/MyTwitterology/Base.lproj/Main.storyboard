@@ -50,11 +50,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetsCell" rowHeight="90" id="d0t-WF-Lsi" customClass="TweetsCell" customModule="MyTwitterology" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TweetsCell" rowHeight="90" id="d0t-WF-Lsi" customClass="TweetsCell" customModule="MyTwitterology" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0t-WF-Lsi" id="qI1-vr-erm">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ipy-nQ-oHb">
@@ -85,6 +85,7 @@
                                             <outlet property="nameLabel" destination="MRa-tk-MQS" id="G7R-Np-6mD"/>
                                             <outlet property="profileImageView" destination="ipy-nQ-oHb" id="b3p-Fh-mKP"/>
                                             <outlet property="tweetLabel" destination="ZSx-sE-RgA" id="gkS-sA-BHq"/>
+                                            <segue destination="SbJ-FW-zcM" kind="push" id="KCu-x8-tv1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -217,18 +218,34 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNL-Do-lN6">
                                 <rect key="frame" x="20" y="385" width="59" height="30"/>
                                 <state key="normal" title="Retweet"/>
+                                <connections>
+                                    <action selector="onRetweet:" destination="SbJ-FW-zcM" eventType="touchUpInside" id="spu-vD-JDt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fh-v0-HPq">
                                 <rect key="frame" x="248" y="385" width="52" height="30"/>
                                 <state key="normal" title="Reply"/>
+                                <connections>
+                                    <action selector="onReply:" destination="SbJ-FW-zcM" eventType="touchUpInside" id="kMM-9L-2G8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-ux-YnQ">
                                 <rect key="frame" x="128" y="385" width="86" height="30"/>
                                 <state key="normal" title="Favourite"/>
+                                <connections>
+                                    <action selector="onFavorite:" destination="SbJ-FW-zcM" eventType="touchUpInside" id="nwk-lw-3GE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xVg-h9-eHO"/>
+                    <connections>
+                        <outlet property="createdAtLabel" destination="yh7-MK-cih" id="e3B-xr-OGo"/>
+                        <outlet property="nameLabel" destination="zTv-w1-KWa" id="h2R-rj-mEr"/>
+                        <outlet property="profileImageView" destination="jXi-gI-Bf8" id="QXk-IN-MbM"/>
+                        <outlet property="tweetLabel" destination="fnp-iW-Tb8" id="69m-je-WCW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzo-mb-zLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
