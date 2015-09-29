@@ -60,11 +60,13 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let cell = sender as! TweetsCell
-        let indexPath = tweetsTableView.indexPathForCell(cell)
-        let tweet = self.tweets![indexPath!.row]
-        let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
-        tweetDetailsViewController.tweet = tweet
+        if sender is TweetsCell{
+            let cell = sender as! TweetsCell
+            let indexPath = tweetsTableView.indexPathForCell(cell)
+            let tweet = self.tweets![indexPath!.row]
+            let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
+            tweetDetailsViewController.tweet = tweet            
+        }
     }
     
     

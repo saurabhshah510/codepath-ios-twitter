@@ -10,11 +10,17 @@ import UIKit
 
 class ComposeTweetViewController: UIViewController {
 
-    @IBOutlet weak var tweetTextField: UITextField!
+    
+    @IBOutlet weak var tweetTextField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let borderColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
+        
+        
+        tweetTextField.layer.borderColor = borderColor.CGColor
+        tweetTextField.layer.borderWidth = 1.0
+        tweetTextField.layer.cornerRadius = 5.0
         // Do any additional setup after loading the view.
     }
 

@@ -151,11 +151,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GJK-u2-MX0">
-                                <rect key="frame" x="20" y="105" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzF-Wp-QSK">
                                 <rect key="frame" x="137" y="269" width="46" height="30"/>
                                 <state key="normal" title="Tweet"/>
@@ -163,6 +158,12 @@
                                     <action selector="onClickTweet:" destination="2bB-cW-Gan" eventType="touchUpInside" id="fjA-ZU-lxn"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bt9-37-q9V">
+                                <rect key="frame" x="20" y="93" width="280" height="154"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -174,7 +175,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tweetTextField" destination="GJK-u2-MX0" id="6jb-G9-ISf"/>
+                        <outlet property="tweetTextField" destination="Bt9-37-q9V" id="0JC-qN-yOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3a-y2-we5" userLabel="First Responder" sceneMemberID="firstResponder"/>
