@@ -18,6 +18,8 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "fetchTweets", forControlEvents: UIControlEvents.ValueChanged)
         tweetsTableView.insertSubview(refreshControl, atIndex: 0)
+        tweetsTableView.rowHeight = UITableViewAutomaticDimension
+        tweetsTableView.estimatedRowHeight = 120
         fetchTweets()
         // Do any additional setup after loading the view.
     }
