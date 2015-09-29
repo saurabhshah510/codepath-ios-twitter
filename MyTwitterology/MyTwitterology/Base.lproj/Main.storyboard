@@ -57,8 +57,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ipy-nQ-oHb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="81"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipy-nQ-oHb">
+                                                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="UqP-SP-wpb"/>
+                                                        <constraint firstAttribute="width" constant="70" id="aVm-GV-bfp"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-tk-MQS">
                                                     <rect key="frame" x="105" y="0.0" width="93" height="21"/>
@@ -79,6 +83,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ipy-nQ-oHb" firstAttribute="top" secondItem="qI1-vr-erm" secondAttribute="top" constant="8" id="rQf-z8-GFF"/>
+                                                <constraint firstItem="ipy-nQ-oHb" firstAttribute="leading" secondItem="qI1-vr-erm" secondAttribute="leading" constant="8" id="tBc-FO-6CL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="createdAtLabel" destination="fjj-aG-CTV" id="6mC-8T-uxe"/>

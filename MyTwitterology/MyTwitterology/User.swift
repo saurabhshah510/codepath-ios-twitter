@@ -23,7 +23,9 @@ class User: NSObject {
         self.dictionary = dictionary
         name = dictionary["name"] as? String
         screen_name = dictionary["screen_name"] as? String
-        profileImageUrl = NSURL(string: dictionary["profile_image_url"] as! String)
+        let normal = dictionary["profile_image_url"]  as! String
+        let original = normal.stringByReplacingOccurrencesOfString("_normal", withString: "")
+        profileImageUrl = NSURL(string: original)
         tagline = dictionary["description"] as? String
     }
     
