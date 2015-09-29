@@ -36,4 +36,17 @@ class TweetsCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func onRetweet(sender: AnyObject) {
+        TwitterClient.sharedInstance.retweet(tweet)
+    }
+    
+    @IBAction func onFavorite(sender: AnyObject) {
+        TwitterClient.sharedInstance.favorite(tweet)
+    }
+    
+    @IBOutlet weak var onRetweet: UIButton!
+    
+    
+    @IBAction func onReply(sender: AnyObject) {
+    }
 }
