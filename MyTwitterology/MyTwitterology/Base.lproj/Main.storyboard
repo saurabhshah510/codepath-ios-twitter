@@ -91,6 +91,7 @@
                                                     <state key="normal" title="Button" image="reply"/>
                                                     <connections>
                                                         <action selector="onReply:" destination="d0t-WF-Lsi" eventType="touchUpInside" id="NgI-82-Koh"/>
+                                                        <segue destination="SbJ-FW-zcM" kind="push" identifier="replyTweetSegue" id="jcx-jt-Bgb"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ule-Rc-uPd">
@@ -142,7 +143,7 @@
                                             <outlet property="onRetweet" destination="Ule-Rc-uPd" id="wZZ-RT-ovn"/>
                                             <outlet property="profileImageView" destination="ipy-nQ-oHb" id="b3p-Fh-mKP"/>
                                             <outlet property="tweetLabel" destination="ZSx-sE-RgA" id="gkS-sA-BHq"/>
-                                            <segue destination="SbJ-FW-zcM" kind="push" id="KCu-x8-tv1"/>
+                                            <segue destination="SbJ-FW-zcM" kind="push" identifier="selectTweetSegue" id="KCu-x8-tv1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -232,7 +233,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.4322140183" green="0.7492763107" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.25882352941176473" green="0.59607843137254901" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -344,18 +345,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzo-mb-zLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="1001"/>
+            <point key="canvasLocation" x="748" y="1075"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ug8-Qb-5Jn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dql-J3-Xqc" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="UN0-dP-cZ7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="334-B0-V5m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.4322140183" green="0.7492763107" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.25882352939999997" green="0.59607843140000005" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -372,4 +374,7 @@
         <image name="reply" width="16" height="16"/>
         <image name="retweet" width="19" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KCu-x8-tv1"/>
+    </inferredMetricsTieBreakers>
 </document>

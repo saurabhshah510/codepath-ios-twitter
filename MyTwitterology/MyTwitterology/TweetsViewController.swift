@@ -58,15 +58,19 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             return UITableViewCell()
         }
     }
-    
+        
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if sender is TweetsCell{
-            let cell = sender as! TweetsCell
-            let indexPath = tweetsTableView.indexPathForCell(cell)
-            let tweet = self.tweets![indexPath!.row]
-            let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
-            tweetDetailsViewController.tweet = tweet            
+        let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
+        var tweet: Tweet!
+        var cell: TweetsCell!
+        if segue.identifier == "selectTweetSegue"{
+            cell = sender as! TweetsCell
+        }else if segue.identifier == "replyTweetSegue"{
+            cell = (sender!.superview!)!.superview as! TweetsCell
         }
+        let indexPath = tweetsTableView.indexPathForCell(cell)
+        tweet = self.tweets![indexPath!.row]
+        tweetDetailsViewController.tweet = tweet
     }
     
     
