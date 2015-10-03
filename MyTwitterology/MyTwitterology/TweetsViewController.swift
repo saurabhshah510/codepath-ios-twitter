@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TweetsCellDelegate {
     var refreshControl: UIRefreshControl!
     var tweets: [Tweet]?
     @IBOutlet weak var tweetsTableView: UITableView!
@@ -45,6 +45,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
@@ -53,24 +54,30 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         if self.tweets != nil{
             var cell = tweetsTableView.dequeueReusableCellWithIdentifier("TweetsCell", forIndexPath: indexPath) as! TweetsCell
             cell.tweet = self.tweets![indexPath.row]
+            cell.delegate = self
             return cell
         }else{
             return UITableViewCell()
         }
     }
+    
+    func tweetCell(tweetCell: TweetsCell, tweet: Tweet){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("TweetDetailsVC") as! TweetDetailsViewController
+        vc.tweet = tweet
+        self.navigationController?.pushViewController(
+            vc, animated: true)
+    }
         
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
-        var tweet: Tweet!
-        var cell: TweetsCell!
         if segue.identifier == "selectTweetSegue"{
-            cell = sender as! TweetsCell
-        }else if segue.identifier == "replyTweetSegue"{
-            cell = (sender!.superview!)!.superview as! TweetsCell
+            let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
+            var tweet: Tweet!
+            let cell = sender as! TweetsCell
+            let indexPath = tweetsTableView.indexPathForCell(cell)
+            tweet = self.tweets![indexPath!.row]
+            tweetDetailsViewController.tweet = tweet        
         }
-        let indexPath = tweetsTableView.indexPathForCell(cell)
-        tweet = self.tweets![indexPath!.row]
-        tweetDetailsViewController.tweet = tweet
     }
     
     

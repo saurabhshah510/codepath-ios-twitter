@@ -9,12 +9,17 @@
 import UIKit
 
 
+@objc protocol TweetsCellDelegate{
+    optional func tweetCell(tweetCell: TweetsCell, tweet: Tweet)
+}
+
 class TweetsCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
+    weak var delegate: TweetsCellDelegate?
     
     
     var tweet: Tweet! {
@@ -49,5 +54,6 @@ class TweetsCell: UITableViewCell {
     
     
     @IBAction func onReply(sender: AnyObject) {
+        delegate?.tweetCell?(self, tweet: tweet)
     }
 }

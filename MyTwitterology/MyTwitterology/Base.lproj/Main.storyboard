@@ -91,7 +91,6 @@
                                                     <state key="normal" title="Button" image="reply"/>
                                                     <connections>
                                                         <action selector="onReply:" destination="d0t-WF-Lsi" eventType="touchUpInside" id="NgI-82-Koh"/>
-                                                        <segue destination="SbJ-FW-zcM" kind="push" identifier="replyTweetSegue" id="jcx-jt-Bgb"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ule-Rc-uPd">
@@ -247,7 +246,7 @@
         <!--Tweet Details View Controller-->
         <scene sceneID="cn0-Pj-L8W">
             <objects>
-                <viewController id="SbJ-FW-zcM" customClass="TweetDetailsViewController" customModule="MyTwitterology" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetDetailsVC" id="SbJ-FW-zcM" customClass="TweetDetailsViewController" customModule="MyTwitterology" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Tu-eY-IDa"/>
                         <viewControllerLayoutGuide type="bottom" id="JCg-bx-COI"/>
@@ -374,7 +373,4 @@
         <image name="reply" width="16" height="16"/>
         <image name="retweet" width="19" height="16"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="KCu-x8-tv1"/>
-    </inferredMetricsTieBreakers>
 </document>
