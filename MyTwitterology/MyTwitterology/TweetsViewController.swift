@@ -30,12 +30,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             self.tweetsTableView.reloadData()
             self.refreshControl.endRefreshing()
         }
-    }
-    
-    @IBAction func onLogout(sender: AnyObject) {
-        User.currentUser?.logout()
-    }
-    
+    }        
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if tweets != nil{

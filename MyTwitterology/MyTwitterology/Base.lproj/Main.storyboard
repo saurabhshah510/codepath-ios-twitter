@@ -26,9 +26,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="gYS-Q0-qjR" kind="modal" identifier="loginSegue" id="9l7-Mq-aLQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,17 +157,6 @@
                                 <segue destination="Dql-J3-Xqc" kind="modal" id="I3T-Vu-Ejv"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="u5D-Fe-DWr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3v1-12-xiH">
-                                <rect key="frame" x="233" y="7" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="onLogout:" destination="FMk-sG-Uq5" eventType="touchUpInside" id="CVR-hG-8HF"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tweetsTableView" destination="pZx-4w-oMN" id="7YQ-AK-cqH"/>
@@ -242,6 +228,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yl8-9g-emf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="216" y="312"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="f3E-Vh-VFU">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="ul8-ow-60V" customClass="MenuViewController" customModule="MyTwitterology" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WmL-O5-wE1"/>
+                        <viewControllerLayoutGuide type="bottom" id="VYO-Pt-94o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2lV-M4-sF2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoG-5s-BbU">
+                                <rect key="frame" x="0.0" y="0.0" width="138" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whe-JV-DmM">
+                                        <rect key="frame" x="0.0" y="50" width="146" height="169"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeh-YH-jcp">
+                                        <rect key="frame" x="0.0" y="222" width="146" height="169"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mentions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2o-O6-N3Q">
+                                        <rect key="frame" x="0.0" y="399" width="146" height="169"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dx-EM-Nvu">
+                                        <rect key="frame" x="0.0" y="8" width="138" height="30"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="onLogout:" destination="ul8-ow-60V" eventType="touchUpInside" id="UVC-vf-GeE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93337673611111116" green="0.93337673611111116" blue="0.93337673611111116" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rSz-eK-Qkc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRz-rB-DaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="1014"/>
         </scene>
         <!--Tweet Details View Controller-->
         <scene sceneID="cn0-Pj-L8W">
@@ -344,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzo-mb-zLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="1075"/>
+            <point key="canvasLocation" x="1280" y="1075"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ug8-Qb-5Jn">

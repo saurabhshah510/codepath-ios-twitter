@@ -1,19 +1,23 @@
 //
-//  LoginViewController.swift
+//  MenuViewController.swift
 //  MyTwitterology
 //
-//  Created by Saurabh Shah on 9/28/15.
+//  Created by Saurabh Shah on 10/3/15.
 //  Copyright © 2015 Saurabh Shah. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func onLogout(sender: AnyObject) {
+        User.currentUser?.logout()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,18 +25,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onLogin(sender: AnyObject) {
-        TwitterClient.sharedInstance.login(){
-            (user: User?, error: NSError?) in
-            if user != nil{
-                self.performSegueWithIdentifier(
-                    "loginToMenuSegue", sender: self)
-                //perform segue
-            }else{
-                //handle error
-            }
-        }                
-    }
 
     /*
     // MARK: - Navigation
