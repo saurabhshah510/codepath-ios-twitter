@@ -14,6 +14,7 @@ class MenuViewController: UIViewController {
     var profileViewController: UIViewController!
     var homeViewController: UIViewController!
     
+    //Setup the custom navigation
     private var activeViewController: UIViewController?{
         didSet{
             removeInactiveViewController(oldValue)
@@ -36,21 +37,37 @@ class MenuViewController: UIViewController {
             activeVC.view.frame = contentView.bounds
             contentView.addSubview(activeVC.view)
             activeVC.didMoveToParentViewController(self)
-        }        
+        }
     }
 
+    //View cycle handlers
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        profileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController")
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("TweetsNavigationController")
+        activeViewController = homeViewController
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onLogout(sender: AnyObject) {
-        User.currentUser?.logout()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func onLogout(sender: AnyObject) {
+        User.currentUser?.logout()
+    }
+    
+    //View event handlers
+    @IBAction func onClickHome(sender: AnyObject) {
+        activeViewController = homeViewController
+    }
+    
+    @IBAction func onClickProfile(sender: AnyObject) {
+        activeViewController = profileViewController
+    }
+    
+
 }
