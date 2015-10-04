@@ -274,6 +274,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93337673611111116" green="0.93337673611111116" blue="0.93337673611111116" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="xSm-Dh-sCH"/>
                                 </constraints>
@@ -281,6 +282,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yny-ia-8b4">
                                 <rect key="frame" x="150" y="0.0" width="170" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iR5-vd-Hie" appends="YES" id="x6P-LI-2LO"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,9 +305,16 @@
                     <navigationItem key="navigationItem" id="rSz-eK-Qkc"/>
                     <connections>
                         <outlet property="contentView" destination="Yny-ia-8b4" id="7Na-aM-IS1"/>
+                        <outlet property="menuView" destination="VoG-5s-BbU" id="1aG-BM-Kf7"/>
+                        <outlet property="menuWidthConstraint" destination="xSm-Dh-sCH" id="Scp-2t-NZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRz-rB-DaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="iR5-vd-Hie">
+                    <connections>
+                        <action selector="onContentPan:" destination="ul8-ow-60V" id="yYH-24-V5K"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="115" y="538"/>
         </scene>

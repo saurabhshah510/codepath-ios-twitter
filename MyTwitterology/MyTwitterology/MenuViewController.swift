@@ -11,8 +11,13 @@ import UIKit
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var menuWidthConstraint: NSLayoutConstraint!
+    var menuWidth:CGFloat = 150.0
+    
     var profileViewController: UIViewController!
     var homeViewController: UIViewController!
+    var menuViewOriginalCenter: CGPoint!
     
     //Setup the custom navigation
     private var activeViewController: UIViewController?{
@@ -47,6 +52,7 @@ class MenuViewController: UIViewController {
         profileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController")
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("TweetsNavigationController")
         activeViewController = homeViewController
+        menuWidthConstraint.constant = 0
         // Do any additional setup after loading the view.
     }
     
@@ -69,5 +75,18 @@ class MenuViewController: UIViewController {
         activeViewController = profileViewController
     }
     
-
+    @IBAction func onContentPan(sender: UIPanGestureRecognizer) {
+        var point = sender.locationInView(view)
+        var velocity = sender.velocityInView(view)
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            print("Gesture began at: \(point)")
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            print("Gesture changed at: \(point)")
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            menuWidthConstraint.constant =  menuWidth
+            print("Gesture ended at: \(point)")
+        }
+        
+    }
 }
