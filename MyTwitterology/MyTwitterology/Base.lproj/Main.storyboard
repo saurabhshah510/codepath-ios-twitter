@@ -26,6 +26,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="ul8-ow-60V" kind="modal" identifier="loginToMenuSegue" id="s82-1f-kCD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRz-rB-DaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="1014"/>
+            <point key="canvasLocation" x="228" y="988"/>
         </scene>
         <!--Tweet Details View Controller-->
         <scene sceneID="cn0-Pj-L8W">
