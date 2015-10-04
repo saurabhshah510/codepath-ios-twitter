@@ -9,6 +9,35 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+    
+    @IBOutlet weak var contentView: UIView!
+    var profileViewController: UIViewController!
+    var homeViewController: UIViewController!
+    
+    private var activeViewController: UIViewController?{
+        didSet{
+            removeInactiveViewController(oldValue)
+            updateActiveViewController()
+        }
+    }
+    
+    private  func removeInactiveViewController(inactiveViewController: UIViewController?){
+        if let inActiveVC = inactiveViewController{
+            inActiveVC.willMoveToParentViewController(nil)
+            inActiveVC.view.removeFromSuperview()
+            inActiveVC.removeFromParentViewController()
+        }
+        
+    }
+    
+    private func updateActiveViewController(){
+        if let activeVC = activeViewController{
+            addChildViewController(activeVC)
+            activeVC.view.frame = contentView.bounds
+            contentView.addSubview(activeVC.view)
+            activeVC.didMoveToParentViewController(self)
+        }        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +53,4 @@ class MenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
