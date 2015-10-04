@@ -76,17 +76,15 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onContentPan(sender: UIPanGestureRecognizer) {
-        var point = sender.locationInView(view)
-        var velocity = sender.velocityInView(view)
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            print("Gesture began at: \(point)")
-        } else if sender.state == UIGestureRecognizerState.Changed {
-            print("Gesture changed at: \(point)")
-        } else if sender.state == UIGestureRecognizerState.Ended {
-            menuWidthConstraint.constant =  menuWidth
-            print("Gesture ended at: \(point)")
+        let velocity = sender.velocityInView(view)
+        if velocity.x > 0{
+            if sender.state == UIGestureRecognizerState.Ended{
+                menuWidthConstraint.constant =  menuWidth
+            }
+        } else {
+            if sender.state == UIGestureRecognizerState.Ended{
+                menuWidthConstraint.constant =  0
+            }
         }
-        
     }
 }
