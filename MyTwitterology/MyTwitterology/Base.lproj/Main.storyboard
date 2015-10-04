@@ -244,43 +244,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoG-5s-BbU">
-                                <rect key="frame" x="0.0" y="20" width="138" height="548"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoG-5s-BbU">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="568"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dx-EM-Nvu">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
+                                        <rect key="frame" x="0.0" y="20" width="138" height="30"/>
                                         <state key="normal" title="Logout"/>
                                         <connections>
                                             <action selector="onLogout:" destination="ul8-ow-60V" eventType="touchUpInside" id="UVC-vf-GeE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY2-9P-jrs">
-                                        <rect key="frame" x="0.0" y="69" width="138" height="85"/>
+                                        <rect key="frame" x="0.0" y="89" width="138" height="85"/>
                                         <state key="normal" title="Home"/>
                                         <connections>
                                             <action selector="onClickHome:" destination="ul8-ow-60V" eventType="touchUpInside" id="3Ha-LK-yQS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbw-VC-ml3">
-                                        <rect key="frame" x="0.0" y="184" width="138" height="85"/>
+                                        <rect key="frame" x="0.0" y="204" width="138" height="85"/>
                                         <state key="normal" title="Profile"/>
                                         <connections>
                                             <action selector="onClickProfile:" destination="ul8-ow-60V" eventType="touchUpInside" id="aN1-Dg-DXZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayI-IS-ycP">
-                                        <rect key="frame" x="0.0" y="313" width="138" height="85"/>
+                                        <rect key="frame" x="0.0" y="333" width="138" height="85"/>
                                         <state key="normal" title="Mentions"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93337673611111116" green="0.93337673611111116" blue="0.93337673611111116" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="xSm-Dh-sCH"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yny-ia-8b4">
-                                <rect key="frame" x="146" y="20" width="174" height="548"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yny-ia-8b4">
+                                <rect key="frame" x="150" y="0.0" width="170" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VYO-Pt-94o" firstAttribute="top" secondItem="Yny-ia-8b4" secondAttribute="bottom" id="08p-wM-5Fc"/>
+                            <constraint firstItem="VoG-5s-BbU" firstAttribute="leading" secondItem="2lV-M4-sF2" secondAttribute="leading" id="27l-Ng-pT3"/>
+                            <constraint firstAttribute="trailing" secondItem="Yny-ia-8b4" secondAttribute="trailing" id="2Ie-tK-3Fw"/>
+                            <constraint firstItem="Yny-ia-8b4" firstAttribute="centerY" secondItem="2lV-M4-sF2" secondAttribute="centerY" id="2e1-6y-AdW"/>
+                            <constraint firstItem="VoG-5s-BbU" firstAttribute="top" secondItem="2lV-M4-sF2" secondAttribute="top" id="6Tf-Jj-b4W"/>
+                            <constraint firstItem="VoG-5s-BbU" firstAttribute="centerY" secondItem="2lV-M4-sF2" secondAttribute="centerY" id="93E-mo-y41"/>
+                            <constraint firstItem="Yny-ia-8b4" firstAttribute="top" secondItem="2lV-M4-sF2" secondAttribute="top" id="BIl-Z5-C5Y"/>
+                            <constraint firstItem="Yny-ia-8b4" firstAttribute="leading" secondItem="VoG-5s-BbU" secondAttribute="trailing" id="KHH-cQ-iqR"/>
+                            <constraint firstItem="Yny-ia-8b4" firstAttribute="leading" secondItem="VoG-5s-BbU" secondAttribute="trailing" id="M7D-jW-ddz"/>
+                            <constraint firstItem="VYO-Pt-94o" firstAttribute="top" secondItem="VoG-5s-BbU" secondAttribute="bottom" id="aFQ-v1-OsX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rSz-eK-Qkc"/>
                     <connections>
