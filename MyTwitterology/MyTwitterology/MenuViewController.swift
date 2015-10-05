@@ -79,14 +79,18 @@ class MenuViewController: UIViewController {
         let velocity = sender.velocityInView(view)
         if velocity.x > 0{
             if sender.state == UIGestureRecognizerState.Ended{
+                self.view.layoutIfNeeded()
                 UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: { () -> Void in
                     self.menuWidthConstraint.constant = self.menuWidth
+                    self.view.layoutIfNeeded()
                     }, completion:nil)
             }
         } else {
+            self.view.layoutIfNeeded()
             if sender.state == UIGestureRecognizerState.Ended{
                 UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: { () -> Void in
                     self.menuWidthConstraint.constant = 0
+                    self.view.layoutIfNeeded()
                     }, completion:nil)
             }
         }
