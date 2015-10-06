@@ -12,13 +12,19 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchProfileInfo()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func fetchProfileInfo(){
+        TwitterClient.sharedInstance.profileInfoWithParams(nil, user: User.currentUser!) { (error) -> () in
+            print(User.currentUser?.userAccount?.followersCount)
+        }
     }
     
 

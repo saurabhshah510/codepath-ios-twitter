@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A954FCB1BC094E30004E348 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A954FCA1BC094E30004E348 /* MenuViewController.swift */; };
 		0A954FCD1BC0BD390004E348 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A954FCC1BC0BD390004E348 /* ProfileViewController.swift */; };
+		0A954FCF1BC25CA90004E348 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A954FCE1BC25CA90004E348 /* UserAccount.swift */; };
 		0AE36C841BB928D30070BAF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE36C831BB928D30070BAF0 /* AppDelegate.swift */; };
 		0AE36C891BB928D30070BAF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C871BB928D30070BAF0 /* Main.storyboard */; };
 		0AE36C8B1BB928D30070BAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE36C8A1BB928D30070BAF0 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		082C33E0B44F96F13EFF0CA4 /* libPods-MyTwitterology.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTwitterology.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A954FCA1BC094E30004E348 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0A954FCC1BC0BD390004E348 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0A954FCE1BC25CA90004E348 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		0AE36C801BB928D30070BAF0 /* MyTwitterology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTwitterology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE36C831BB928D30070BAF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE36C881BB928D30070BAF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				0AE36C9F1BB9E9CF0070BAF0 /* User.swift */,
 				0AE36CA11BB9E9DC0070BAF0 /* Tweet.swift */,
+				0A954FCE1BC25CA90004E348 /* UserAccount.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				0AE36CAD1BBA55910070BAF0 /* TweetDetailsViewController.swift in Sources */,
 				0A954FCD1BC0BD390004E348 /* ProfileViewController.swift in Sources */,
 				0AE36CA41BBA1D750070BAF0 /* TweetsViewController.swift in Sources */,
+				0A954FCF1BC25CA90004E348 /* UserAccount.swift in Sources */,
 				0AE36C9D1BB9C2210070BAF0 /* LoginViewController.swift in Sources */,
 				0AE36C9A1BB9BD3B0070BAF0 /* TwitterClient.swift in Sources */,
 				0AE36C841BB928D30070BAF0 /* AppDelegate.swift in Sources */,
