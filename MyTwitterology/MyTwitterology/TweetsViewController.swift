@@ -33,7 +33,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
                 self.refreshControl.endRefreshing()
             }
         } else {
-            print("Mentions")
+            TwitterClient.sharedInstance.mentionsWithParams(nil) { (tweets, error) -> () in
+                self.tweets = tweets;
+                self.tweetsTableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
         }
         
     }
