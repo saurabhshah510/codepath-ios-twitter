@@ -10,9 +10,17 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var screenNameLabel: UILabel!
+    @IBOutlet weak var tweetsCountLabel: UILabel!
+    @IBOutlet weak var followingCountLabel: UILabel!
+    @IBOutlet weak var followersCountLabel: UILabel!
+    @IBOutlet weak var favoritesCountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchProfileInfo()
+        fetchProfileInfo(User.currentUser!)
         // Do any additional setup after loading the view.
     }
 
@@ -21,9 +29,15 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func fetchProfileInfo(){
-        TwitterClient.sharedInstance.profileInfoWithParams(nil, user: User.currentUser!) { (error) -> () in
-            print(User.currentUser?.userAccount?.followersCount)
+    func fetchProfileInfo(user: User){
+        TwitterClient.sharedInstance.profileInfoWithParams(nil, user: user) { (error) -> () in
+            self.profileImageView.setImageWithURL(user.profileImageUrl)
+            self.nameLabel.text = user.name!
+            self.screenNameLabel.text = "@\(user.screen_name!)"
+            self.tweetsCountLabel.text = "\(user.userAccount!.statusesCount!)"
+            self.followingCountLabel.text = "\(user.userAccount!.friendsCount!)"
+            self.followersCountLabel.text = "\(user.userAccount!.followersCount!)"
+            self.favoritesCountLabel.text = "\(user.userAccount!.favouritesCount!)"
         }
     }
     
