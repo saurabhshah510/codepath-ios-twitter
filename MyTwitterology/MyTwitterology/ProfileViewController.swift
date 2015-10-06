@@ -17,10 +17,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var followingCountLabel: UILabel!
     @IBOutlet weak var followersCountLabel: UILabel!
     @IBOutlet weak var favoritesCountLabel: UILabel!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchProfileInfo(User.currentUser!)
+        fetchProfileInfo(user!)
         // Do any additional setup after loading the view.
     }
 

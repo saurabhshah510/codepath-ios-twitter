@@ -57,12 +57,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="156.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipy-nQ-oHb">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipy-nQ-oHb">
                                                     <rect key="frame" x="6" y="6" width="80" height="80"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="CR6-2Q-Bse"/>
                                                         <constraint firstAttribute="width" constant="80" id="mnW-ph-Tar"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="TFg-Nm-kdB" appends="YES" id="DVB-aL-MaE"/>
+                                                    </connections>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="user name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-tk-MQS">
                                                     <rect key="frame" x="92" y="6" width="66" height="16"/>
@@ -166,6 +170,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdG-CU-TSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TFg-Nm-kdB">
+                    <connections>
+                        <action selector="onTapProfileImage:" destination="FMk-sG-Uq5" id="xIe-j5-upp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1002" y="-1005"/>
         </scene>
@@ -267,10 +276,6 @@
                                         <connections>
                                             <action selector="onClickProfile:" destination="ul8-ow-60V" eventType="touchUpInside" id="aN1-Dg-DXZ"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayI-IS-ycP">
-                                        <rect key="frame" x="0.0" y="333" width="138" height="85"/>
-                                        <state key="normal" title="Mentions"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93337673611111116" green="0.93337673611111116" blue="0.93337673611111116" alpha="1" colorSpace="calibratedRGB"/>

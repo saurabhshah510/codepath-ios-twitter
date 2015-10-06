@@ -47,9 +47,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         if self.tweets != nil{
-            var cell = tweetsTableView.dequeueReusableCellWithIdentifier("TweetsCell", forIndexPath: indexPath) as! TweetsCell
+            let cell = tweetsTableView.dequeueReusableCellWithIdentifier("TweetsCell", forIndexPath: indexPath) as! TweetsCell
             cell.tweet = self.tweets![indexPath.row]
             cell.delegate = self
+            let tapGesureRecognizer = UITapGestureRecognizer(target: cell, action:"onTapProfileImage:")
+            cell.profileImageView.addGestureRecognizer(tapGesureRecognizer)
             return cell
         }else{
             return UITableViewCell()
@@ -63,6 +65,14 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationController?.pushViewController(
             vc, animated: true)
     }
+    
+    func clickProfileImage(tweetCell: TweetsCell, tweet: Tweet){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+        vc.user = tweet.user!
+        self.navigationController?.pushViewController(
+            vc, animated: false)
+    }
         
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "selectTweetSegue"{
@@ -75,13 +85,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

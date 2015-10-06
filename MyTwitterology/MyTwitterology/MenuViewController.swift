@@ -15,7 +15,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var menuWidthConstraint: NSLayoutConstraint!
     var menuWidth:CGFloat = 150.0
     
-    var profileViewController: UIViewController!
+    var profileViewController: ProfileViewController!
     var homeViewController: UIViewController!
     var menuViewOriginalCenter: CGPoint!
     
@@ -49,7 +49,8 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        profileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController")
+        profileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+        profileViewController.user = User.currentUser
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("TweetsNavigationController")
         activeViewController = homeViewController
         menuWidthConstraint.constant = 0
