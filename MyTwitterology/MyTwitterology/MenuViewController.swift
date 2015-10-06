@@ -16,6 +16,7 @@ class MenuViewController: UIViewController {
     var menuWidth:CGFloat = 150.0
     
     var profileViewController: ProfileViewController!
+    var mentionsViewController: UIViewController!
     var homeViewController: UIViewController!
     var menuViewOriginalCenter: CGPoint!
     
@@ -52,6 +53,7 @@ class MenuViewController: UIViewController {
         profileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
         profileViewController.user = User.currentUser
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("TweetsNavigationController")
+        mentionsViewController = storyboard.instantiateViewControllerWithIdentifier("MentionsViewController")
         activeViewController = homeViewController
         menuWidthConstraint.constant = 0
         // Do any additional setup after loading the view.
@@ -74,6 +76,10 @@ class MenuViewController: UIViewController {
     
     @IBAction func onClickProfile(sender: AnyObject) {
         activeViewController = profileViewController
+    }
+    
+    @IBAction func onClickMentions(sender: AnyObject) {
+        activeViewController = mentionsViewController
     }
     
     @IBAction func onContentPan(sender: UIPanGestureRecognizer) {

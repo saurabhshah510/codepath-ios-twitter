@@ -277,6 +277,13 @@
                                             <action selector="onClickProfile:" destination="ul8-ow-60V" eventType="touchUpInside" id="aN1-Dg-DXZ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-SC-kCU">
+                                        <rect key="frame" x="0.0" y="334" width="138" height="85"/>
+                                        <state key="normal" title="Mentions"/>
+                                        <connections>
+                                            <action selector="onClickMentions:" destination="ul8-ow-60V" eventType="touchUpInside" id="LL5-EA-hWg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93337673611111116" green="0.93337673611111116" blue="0.93337673611111116" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -413,6 +420,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ue0-jf-DOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="587" y="534"/>
+        </scene>
+        <!--Mentions View Controller-->
+        <scene sceneID="cRt-zl-G0H">
+            <objects>
+                <viewController storyboardIdentifier="MentionsViewController" id="3Kd-kw-l6B" customClass="MentionsViewController" customModule="MyTwitterology" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aad-aE-eYT"/>
+                        <viewControllerLayoutGuide type="bottom" id="MYW-tR-ILT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BC8-5f-TCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LpE-Dn-aWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="534"/>
         </scene>
         <!--Tweet Details View Controller-->
         <scene sceneID="cn0-Pj-L8W">
