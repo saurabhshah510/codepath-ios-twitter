@@ -18,6 +18,7 @@ class User: NSObject {
     var profileImageUrl: NSURL?
     var tagline: String?
     var dictionary: NSDictionary
+    var userAccount: UserAccount?
     
     init(dictionary: NSDictionary){
         self.dictionary = dictionary
