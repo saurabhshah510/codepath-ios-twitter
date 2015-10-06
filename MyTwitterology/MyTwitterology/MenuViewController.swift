@@ -16,8 +16,8 @@ class MenuViewController: UIViewController {
     var menuWidth:CGFloat = 150.0
     
     var profileViewController: ProfileViewController!
-    var mentionsViewController: UIViewController!
-    var homeViewController: UIViewController!
+    var mentionsViewController: UINavigationController!
+    var homeViewController: UINavigationController!
     var menuViewOriginalCenter: CGPoint!
     
     //Setup the custom navigation
@@ -52,8 +52,12 @@ class MenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         profileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
         profileViewController.user = User.currentUser
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("TweetsNavigationController")
-        mentionsViewController = storyboard.instantiateViewControllerWithIdentifier("MentionsViewController")
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("TweetsNavigationController") as! UINavigationController
+        let hvc = homeViewController.topViewController as!TweetsViewController
+        hvc.dataType = "home"
+        mentionsViewController = storyboard.instantiateViewControllerWithIdentifier("TweetsNavigationController") as! UINavigationController
+        let mvc = mentionsViewController.topViewController as! TweetsViewController
+        mvc.dataType = "mentions"
         activeViewController = homeViewController
         menuWidthConstraint.constant = 0
         // Do any additional setup after loading the view.

@@ -12,6 +12,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     var refreshControl: UIRefreshControl!
     var tweets: [Tweet]?
     @IBOutlet weak var tweetsTableView: UITableView!
+    var dataType = "home"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,17 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func fetchTweets(){
-        TwitterClient.sharedInstance.homeTimelineWithParams(nil) { (tweets, error) -> () in
-            self.tweets = tweets;
-            self.tweetsTableView.reloadData()
-            self.refreshControl.endRefreshing()
+        if dataType == "home" {
+            TwitterClient.sharedInstance.homeTimelineWithParams(nil) { (tweets, error) -> () in
+                self.tweets = tweets;
+                self.tweetsTableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+        } else {
+            print("Mentions")
         }
-    }        
+        
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if tweets != nil{
